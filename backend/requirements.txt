@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+gspread 
+oauth2client
+opencv-python
+matplotlib
+python-dotenv
+inference-sdk
+pydantic-ai-slim[google]
+python-multipart
+pyOpenSSL

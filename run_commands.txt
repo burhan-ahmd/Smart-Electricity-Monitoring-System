@@ -1,0 +1,69 @@
+Smart Meter Project Run Guide
+=============================
+
+cd backend
+
+conda activate meter_env
+
+python -m uvicorn prototype:app --host 127.0.0.1 --port 8000
+
+=============================
+
+cd frontend
+
+npm run dev -- --port 5173
+
+
+
+Project folder:
+D:\2026\14_meter
+
+1. Open PowerShell.
+
+2. Go to the project folder:
+   cd D:\2026\14_meter
+
+3. Activate the project Python environment:
+   conda activate meter_env
+
+4. Install or verify backend packages inside meter_env:
+   python -m pip install -r requirements.txt
+
+5. Start the backend API:
+   python -m uvicorn prototype:app --host 127.0.0.1 --port 8000
+
+6. Open a second PowerShell window.
+
+7. Go to the frontend folder:
+   cd D:\2026\14_meter\frontend
+
+8. Install frontend packages if needed:
+   npm install
+
+9. Start the React frontend:
+   npm run dev -- --port 5173
+
+10. Open the app in your browser:
+    http://127.0.0.1:5173
+
+How the frontend talks to the backend:
+- The React app uses /api by default.
+- Vite proxies /api requests to http://127.0.0.1:8000.
+- This avoids browser CORS/fetch issues during local development.
+
+Useful checks:
+- Backend health check:
+  http://127.0.0.1:8000/
+
+- Latest report endpoint:
+  http://127.0.0.1:8000/latest-report
+
+Stopping everything:
+- In the backend PowerShell window, press Ctrl + C.
+- In the frontend PowerShell window, press Ctrl + C.
+
+Important:
+- Always use meter_env for backend commands.
+- Do not run backend package installs from Anaconda base.
+- Keep .env and credentials.json in D:\2026\14_meter.
+- Sheet is attach with my (alis) and its link is this: https://docs.google.com/spreadsheets/d/145a8Yr8T7QMUIAubVKb0k_WMfv7wd84svQoefbFXiZ8/
