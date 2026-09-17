@@ -24,6 +24,8 @@ Smart Electricity Monitoring System is a full-stack application designed for ele
 
 **The Solution:** Upload two meter photos → AI reads the digits → validates against active meters → updates Google Sheets → generates a WhatsApp-ready report with usage forecasting and billing analysis.
 
+<img width="1902" height="944" alt="smart" src="https://github.com/user-attachments/assets/77233e28-7a10-48e6-8f73-f00b69440520" />
+
 ---
 
 ## ✨ Features
